@@ -73,5 +73,24 @@ public class Solutions {
         }
         return ans;
     }
+
+    /*
+     * We'll say that a positive int n is "endy" if it is in the range 0..10 or 90..100 (inclusive). 
+     * Given an array of positive ints, return a new array of length "count" containing the first endy numbers from the original array.
+     * The original array will contain at least "count" endy numbers.
+     */
+    public int[] copyEndy(int[] nums, int count) {
+        int[] ans = new int[count];
+        int ans_iterator = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (((nums[i] >= 0) && (nums[i] <= 10)) || ((nums[i] >= 90) && (nums[i] <= 100))) {
+                ans[ans_iterator++] = nums[i];
+                if (ans_iterator == count) {
+                    break;
+                }
+            }
+        }
+        return ans;
+    }
     
 }
