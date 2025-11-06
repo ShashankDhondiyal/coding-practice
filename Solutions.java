@@ -118,4 +118,16 @@ public class Solutions {
         return 2 + bunnyEars(bunnies - 1);
     }
 
+    /*
+     * Define a recursive fibonacci(n) method that returns the nth fibonacci number, with n=0 representing the start of the sequence.
+     */
+    public int fibonacci(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
 }
