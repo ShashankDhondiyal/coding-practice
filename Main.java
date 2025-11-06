@@ -3,16 +3,14 @@ public class Main {
         Solutions sol = new Solutions();
 
         int[][] tests = {
-            {1,1},
-            {100,100},
-            {1,100,100},
-            {1,100,99,100},
-            {100,1,100,100},
-            {100,1,100,100,5},
+            {2,2,4,4},
+            {4,4,4,2,2,2},
+            {3,4,5,1,2,3},
+            {1,2},
         };
         
         for (int[] test : tests) {
-            System.out.println(sol.scores100(test));
+            System.out.println(sol.scoresAverage(test));
         }
     }
 }

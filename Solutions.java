@@ -25,4 +25,27 @@ public class Solutions {
         }
         return false;
     }
+
+    /*
+     * Given an array of scores, compute the int average of the first half and the second half, and return whichever is larger. 
+     * We'll say that the second half begins at index length/2. 
+     * The array length will be at least 2.
+     */
+    public int scoresAverage(int[] scores) {
+        int firstAverage = 0;
+        int secondAverage = 0;
+        int i = 0;
+
+        while (i < (scores.length / 2)) {
+            firstAverage += scores[i++];
+        }
+        firstAverage /= (scores.length / 2);
+
+        while (i < scores.length) {
+            secondAverage += scores[i++];
+        }
+        secondAverage /= (scores.length / 2);
+
+        return firstAverage > secondAverage ? firstAverage : secondAverage;
+    }
 }
