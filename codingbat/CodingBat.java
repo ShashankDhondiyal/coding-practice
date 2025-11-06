@@ -1,4 +1,4 @@
-public class Solutions {
+public class CodingBat {
 
     /*
     * Given an array of scores, return true if each score is equal or greater than the one before.
