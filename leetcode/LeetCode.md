@@ -4,6 +4,7 @@
 
 1. Valid Parentheses
 2. Implement Queue Using Stacks
+3. Evaluate Boolean Binary Tree
 
 ## Valid Parentheses
 
@@ -37,6 +38,7 @@ Implement the MyQueue class:
 4. `boolean empty()` Returns true if the queue is empty, false otherwise.
 
 Notes:
+
 - You must use only standard operations of a stack, which means only push to top, peek/pop from top, size, and is empty operations are valid.
 
 **Examples** 
@@ -46,6 +48,7 @@ Notes:
 | ["MyQueue","push","push","peek","pop","empty"], [[],[1],[2],[],[],[]] | [null, null, null, 1, 1, false] |
 
 **Explanation**
+
 ```
 MyQueue myQueue = new MyQueue();
 myQueue.push(1); // queue is: [1]
@@ -54,3 +57,17 @@ myQueue.peek(); // return 1
 myQueue.pop(); // return 1, queue is [2]
 myQueue.empty(); // return false
 ```
+
+## Evaluate Boolean Binary Tree
+
+You are given the root of a full binary tree with the following properties:
+
+1. Leaf nodes have either the value 0 or 1, where 0 represents False and 1 represents True.
+2. Non-leaf nodes have either the value 2 or 3, where 2 represents the boolean OR and 3 represents the boolean AND.
+
+**Examples** 
+
+| Input | Ouput |
+| --- | --- |
+| `[2,1,3,null,null,0,1]` | True |
+| `[0]` | False |
