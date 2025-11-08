@@ -5,6 +5,7 @@
 1. Valid Parentheses
 2. Implement Queue Using Stacks
 3. Evaluate Boolean Binary Tree
+4. Same Tree
 
 ## Valid Parentheses
 
@@ -71,3 +72,17 @@ You are given the root of a full binary tree with the following properties:
 | --- | --- |
 | `[2,1,3,null,null,0,1]` | True |
 | `[0]` | False |
+
+## Same Tree
+
+Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+
+Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+
+**Examples** 
+
+| Input | Ouput |
+| --- | --- |
+| `p = [1,2,3], q = [1,2,3]` | True |
+| `p = [1,2], q = [1,null,2]` | False |
+| `p = [1,2,1], q = [1,1,2]` | False |
