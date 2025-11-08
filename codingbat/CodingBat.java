@@ -142,4 +142,31 @@ public class CodingBat {
         }
         return (bunnies % 2 == 1) ? (2 + bunnyEars2(bunnies - 1)) : (3 + bunnyEars2(bunnies - 1));
     }
+
+    /*
+     * Start with two arrays of strings, A and B, each with its elements in alphabetical order and without duplicates.
+     * Return a new array containing the first N elements from the two arrays.
+     * The result array should be in alphabetical order and without duplicates.
+     * A and B will both have a length which is N or more
+     */
+    public String[] mergeTwo(String[] a, String[] b, int n) {
+        int i = 0;
+        int j = 0;
+        String[] fin = new String[n];
+        int k = 0;
+
+        while (k < n) {
+            if (a[i].compareTo(b[j]) == 0) {
+                fin[k++] = a[i++];
+                j++;
+            }
+            else if (a[i].compareTo(b[j]) < 0) {
+                fin[k++] = a[i++];
+            }
+            else {
+                fin[k++] = b[j++];
+            }
+        }
+        return fin;
+    }
 }
