@@ -12,7 +12,7 @@ leetcode/
     L LeetCode.md
     L ListNode.java
     L TreeNode.java
-Main.java
+.gitignore
 README.md
 ```
 
@@ -25,4 +25,4 @@ The **leetcode** directory contains the files *LeetCode.java*, *LeetCode.md*, *L
 - **ListNode.java** is leetcode's public definition of a list node
 - **TreeNode.java** is leetcode's public definition of a tree node
 
-The **Main.java** file is file used to test solutions written in CodingBat.java and LeetCode.java before submitting to their online solutions page.
+The **.gitignore** file ignores Main.java, used to test solutions in *CodingBat.java* and *LeetCode.java*
