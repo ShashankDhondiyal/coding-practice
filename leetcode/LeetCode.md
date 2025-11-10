@@ -6,6 +6,7 @@
 2. Implement Queue Using Stacks
 3. Evaluate Boolean Binary Tree
 4. Same Tree
+5. Implement Stack Using Queues
 
 ## Valid Parentheses
 
@@ -86,3 +87,26 @@ Two binary trees are considered the same if they are structurally identical, and
 | `p = [1,2,3], q = [1,2,3]` | True |
 | `p = [1,2], q = [1,null,2]` | False |
 | `p = [1,2,1], q = [1,1,2]` | False |
+
+## Implement Stack Using Queues
+
+Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (push, top, pop, and empty).
+
+Implement the MyStack class:
+
+- `void push(int x)` Pushes element x to the top of the stack.
+- `int pop()` Removes the element on the top of the stack and returns it.
+- `int top()` Returns the element on the top of the stack.
+- `boolean empty()` Returns true if the stack is empty, false otherwise.
+
+Notes:
+
+- You must use only standard operations of a queue, which means that only push to back, peek/pop from front, size and is empty operations are valid.
+
+**Examples** 
+
+| Input | Ouput |
+| --- | --- |
+| ["MyStack","push","push","top","pop","empty"], [[],[1],[2],[],[],[]] | [null, null, null, 2, 2, false] |
+
+*Follow-up: Can you implement the stack using only one queue?*

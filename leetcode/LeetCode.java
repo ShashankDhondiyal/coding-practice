@@ -1,4 +1,6 @@
+import java.util.Queue;
 import java.util.Stack;
+import java.util.LinkedList;
 
 public class LeetCode {
     
@@ -107,6 +109,50 @@ public class LeetCode {
         }
 
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    }
+
+    /* Implement Stack Using Queue */
+    class MyStack {
+        private Queue<Integer> myQ = new LinkedList<>();
+        boolean rotated = false;
+
+        public MyStack() {}
+        
+        public void push(int x) {
+            if (rotated) {
+                for (int i = 0; i < (myQ.size() - 1); i++) {
+                    myQ.add(myQ.remove());
+                }
+            }
+            myQ.add(x);
+            rotated = false;
+        }
+        
+        public int pop() {
+            if (!rotated) {
+                for (int i = 0; i < (myQ.size() - 1); i++) {
+                    myQ.add(myQ.remove());
+                }
+            }
+            rotated = false;
+            return myQ.remove();
+            
+        }
+        
+        public int top() {
+            if (!rotated) {
+                for (int i = 0; i < (myQ.size() - 1); i++) {
+                    myQ.add(myQ.remove());
+                }
+            }
+            rotated = true;
+            return myQ.peek();
+
+        }
+        
+        public boolean empty() {
+            return myQ.isEmpty();
+        }
     }
 
 }
