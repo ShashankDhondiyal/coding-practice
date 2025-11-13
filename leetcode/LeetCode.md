@@ -3,15 +3,16 @@
 ### Table of Contents
 
 1. Valid Parentheses
-2. Implement Queue Using Stacks
-3. Evaluate Boolean Binary Tree
-4. Same Tree
-5. Implement Stack Using Queues
-6. Remove N<sup>th</sup> Node From End of List
+2. Implement Queue Using Stacks<sup>+</sup>
+3. Evaluate Boolean Binary Tree<sup>+</sup>
+4. Same Tree<sup>+</sup>
+5. Implement Stack Using Queues<sup>+</sup>
+6. Remove N<sup>th</sup> Node From End of List<sup>+</sup>
+7. Footnote
 
 ## Valid Parentheses
 
-Given a string `s` containing just the characters `(,),{,},[` and `]`, determine if the input string is valid.
+> Given a string `s` containing just the characters `(,),{,},[` and `]`, determine if the input string is valid.
 
 An input string is valid if:
 
@@ -31,7 +32,7 @@ An input string is valid if:
 
 ## Implement Queue Using Stacks
 
-Implement a first-in-first-out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
+> Implement a first-in-first-out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (push, peek, pop, and empty).
 
 Implement the MyQueue class:
 
@@ -40,17 +41,17 @@ Implement the MyQueue class:
 3. `int peek()` Returns the element at the front of the queue.
 4. `boolean empty()` Returns true if the queue is empty, false otherwise.
 
-Notes:
+**Notes:**
 
 - You must use only standard operations of a stack, which means only push to top, peek/pop from top, size, and is empty operations are valid.
 
-**Examples** 
+**Examples:** 
 
 | Input | Ouput |
 | --- | --- |
 | ["MyQueue","push","push","peek","pop","empty"], [[],[1],[2],[],[],[]] | [null, null, null, 1, 1, false] |
 
-**Explanation**
+**Explanation:**
 
 ```
 MyQueue myQueue = new MyQueue();
@@ -63,12 +64,12 @@ myQueue.empty(); // return false
 
 ## Evaluate Boolean Binary Tree
 
-You are given the root of a full binary tree with the following properties:
+> You are given the root of a full binary tree with the following properties:
 
 1. Leaf nodes have either the value 0 or 1, where 0 represents False and 1 represents True.
 2. Non-leaf nodes have either the value 2 or 3, where 2 represents the boolean OR and 3 represents the boolean AND.
 
-**Examples** 
+**Examples:** 
 
 | Input | Ouput |
 | --- | --- |
@@ -77,11 +78,11 @@ You are given the root of a full binary tree with the following properties:
 
 ## Same Tree
 
-Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+> Given the roots of two binary trees p and q, write a function to check if they are the same or not.
 
 Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
-**Examples** 
+**Examples:** 
 
 | Input | Ouput |
 | --- | --- |
@@ -91,7 +92,7 @@ Two binary trees are considered the same if they are structurally identical, and
 
 ## Implement Stack Using Queues
 
-Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (push, top, pop, and empty).
+> Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (push, top, pop, and empty).
 
 Implement the MyStack class:
 
@@ -100,11 +101,11 @@ Implement the MyStack class:
 - `int top()` Returns the element on the top of the stack.
 - `boolean empty()` Returns true if the stack is empty, false otherwise.
 
-Notes:
+**Notes:**
 
 - You must use only standard operations of a queue, which means that only push to back, peek/pop from front, size and is empty operations are valid.
 
-**Examples** 
+**Examples:** 
 
 | Input | Ouput |
 | --- | --- |
@@ -114,12 +115,16 @@ Notes:
 
 ## Remove N<sup>th</sup> Node From End of List
 
-Given the head of a linked list, remove the n<sup>th</sup> node from the end of the list and return its head.
+> Given the head of a linked list, remove the n<sup>th</sup> node from the end of the list and return its head.
 
-**Examples** 
+**Examples:** 
 
 | Input | Ouput |
 | --- | --- |
 | `head = [1,2,3,4,5], n = 2` | [1,2,3,5] |
 | `head = [1], n = 1` | [] |
 | `head = [1,2], n = 1` | [1] |
+
+## Footnote
+
+<sup>+</sup>: Leetcode submission beats 100% of solutions (*at time of submission*)
