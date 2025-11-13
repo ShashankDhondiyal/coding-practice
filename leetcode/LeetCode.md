@@ -7,6 +7,7 @@
 3. Evaluate Boolean Binary Tree
 4. Same Tree
 5. Implement Stack Using Queues
+6. Remove N<sup>th</sup> Node From End of List
 
 ## Valid Parentheses
 
@@ -110,3 +111,15 @@ Notes:
 | ["MyStack","push","push","top","pop","empty"], [[],[1],[2],[],[],[]] | [null, null, null, 2, 2, false] |
 
 *Follow-up: Can you implement the stack using only one queue?*
+
+## Remove N<sup>th</sup> Node From End of List
+
+Given the head of a linked list, remove the n<sup>th</sup> node from the end of the list and return its head.
+
+**Examples** 
+
+| Input | Ouput |
+| --- | --- |
+| `head = [1,2,3,4,5], n = 2` | [1,2,3,5] |
+| `head = [1], n = 1` | [] |
+| `head = [1,2], n = 1` | [1] |

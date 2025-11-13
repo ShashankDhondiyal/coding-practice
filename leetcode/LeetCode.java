@@ -155,4 +155,22 @@ public class LeetCode {
         }
     }
 
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        int size = 0;
+        for (ListNode dummy = head; dummy != null; dummy = dummy.next) {
+            size++;
+        }
+
+        if (n == size) {
+            return head.next;
+        }
+
+        else {
+            int i = 1;
+            ListNode dummy = head;
+            for (; i++ < size - n; dummy = dummy.next) {}
+            dummy.next = dummy.next.next;
+            return head;
+        }
+    }
 }
