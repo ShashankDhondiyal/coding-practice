@@ -8,7 +8,8 @@
 4. Same Tree<sup>+</sup>
 5. Implement Stack Using Queues<sup>+</sup>
 6. Remove N<sup>th</sup> Node From End of List<sup>+</sup>
-7. Footnote
+7. Increment Submatricies by One
+8. Footnote
 
 ## Valid Parentheses
 
@@ -124,6 +125,23 @@ Implement the MyStack class:
 | `head = [1,2,3,4,5], n = 2` | [1,2,3,5] |
 | `head = [1], n = 1` | [] |
 | `head = [1,2], n = 1` | [1] |
+
+## Increment Submatricies by One
+
+> You are given a positive integer n, indicating that we initially have an n x n 0-indexed integer matrix mat filled with zeroes.
+
+You are also given a 2D integer array query. For each query[i] = [row1<sub>i</sub>, col1<sub>i</sub>, row2<sub>i</sub>, col2<sub>i</sub>], you should do the following operation:
+
+- Add 1 to every element in the submatrix with the top left corner (row1<sub>i</sub>, col1<sub>i</sub>) and the bottom right corner (row2<sub>i</sub>, col2<sub>i</sub>). That is, add 1 to mat[x][y] for all row1<sub>i</sub> <= x <= row2<sub>i</sub> and col1<sub>i</sub> <= y <= col2<sub>i</sub>.
+
+Return the matrix mat after performing every query.
+
+**Examples:** 
+
+| Input | Ouput |
+| --- | --- |
+| `n = 3, queries = [[1,1,2,2],[0,0,1,1]]` | [[1,1,0],[1,2,1],[0,1,1]] |
+| `n = 2, queries = [[0,0,1,1]]` | [[1,1],[1,1]] |
 
 ## Footnote
 

@@ -251,4 +251,22 @@ public class LeetCode {
             return head;
         }
     }
+
+    /* Increment Submatrices by One */
+    public int[][] rangeAddQueries(int n, int[][] queries) {
+        
+        // Initalize the matrix as per the question guidlines
+        int[][] mat = new int[n][n];
+
+        for (int[] query : queries) {
+            // only traverse the submatrix range from query indicies
+            for (int row = query[0]; row <= query[2]; row++) {
+                for (int col = query[1]; col <= query[3]; col++) {
+                    mat[row][col]++;
+                }
+            }
+        }
+        // Worst case run time of O(n^3)
+        return mat;
+    }
 }
