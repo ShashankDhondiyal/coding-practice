@@ -9,7 +9,8 @@
 5. Implement Stack Using Queues<sup>+</sup>
 6. Remove N<sup>th</sup> Node From End of List<sup>+</sup>
 7. Increment Submatricies by One
-8. Footnote
+8. Simplify Path
+9. Footnote
 
 ## Valid Parentheses
 
@@ -142,6 +143,34 @@ Return the matrix mat after performing every query.
 | --- | --- |
 | `n = 3, queries = [[1,1,2,2],[0,0,1,1]]` | [[1,1,0],[1,2,1],[0,1,1]] |
 | `n = 2, queries = [[0,0,1,1]]` | [[1,1],[1,1]] |
+
+## Simplify Path
+
+You are given an absolute path for a Unix-style file system, which always begins with a slash '/'. Your task is to transform this absolute path into its simplified canonical path.
+
+The rules of a Unix-style file system are as follows:
+
+- A single period '.' represents the current directory.
+- A double period '..' represents the previous/parent directory.
+- Multiple consecutive slashes such as '//' and '///' are treated as a single slash '/'.
+- Any sequence of periods that does not match the rules above should be treated as a valid directory or file name. For example, '...' and '....' are valid directory or file names.
+
+The simplified canonical path should follow these rules:
+
+- The path must start with a single slash '/'.
+- Directories within the path must be separated by exactly one slash '/'.
+- The path must not end with a slash '/', unless it is the root directory.
+- The path must not have any single or double periods ('.' and '..') used to denote current or parent directories.
+
+**Examples:** 
+
+| Input | Ouput |
+| --- | --- |
+| `"/home/"` | "/home" |
+| `"/home//foo/"` | "/home/foo" |
+| `"/home/user/Documents/../Pictures"` | "/home/user/Pictures" |
+| `"/../"` | "/" |
+| `"/.../a/../b/c/../d/./"` | "/.../b/d" |
 
 ## Footnote
 

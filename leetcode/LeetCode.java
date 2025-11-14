@@ -269,4 +269,41 @@ public class LeetCode {
         // Worst case run time of O(n^3)
         return mat;
     }
+
+    /* Simplify Path  */
+    public String simplifyPath(String path) {
+
+        /* To approach this problem,
+         * we can create a stack to backtrack if we get /.. as an input
+         * and split the input string by '/'
+         */
+        Stack<String> filePath = new Stack<>();
+        
+        String[] nodes = path.split("/+");
+
+        /* Here we can benefit from the stack by managing whether we need to backtrack or not.
+         */
+        for (String node : nodes) {
+            switch (node) {
+                case ".." -> {
+                    if (!filePath.isEmpty()) {
+                        filePath.pop();
+                    }
+                }
+                case "." -> {}
+                case "" -> {}
+                default -> filePath.push(node);
+            }
+        }
+
+        String sPath = "";
+        if (filePath.isEmpty()) {
+            return "/";
+        }
+
+        for (String node : filePath) {
+            sPath = sPath +  "/" + node;
+        }
+        return sPath;
+    }
 }
