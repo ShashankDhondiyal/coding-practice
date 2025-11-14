@@ -194,4 +194,10 @@ public class CodingBat {
     public int triangle(int rows) {
         return rows == 0 ? 0 : rows-- + triangle(rows);
     }
+
+    /* Given a non-negative int n, return the sum of its digits recursively.
+     */
+    public int sumDigits(int n) {
+        return n == 0 ? 0 : ((n % 10) + sumDigits(n / 10));
+    }
 }
